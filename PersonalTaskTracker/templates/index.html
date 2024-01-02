@@ -1,0 +1,44 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <title> To Do List</title>
+    </head>
+    <body>
+        <div class="site-header">
+            <div class = main-title>
+                <h1> To Do List</h1>
+            </div>
+            <form action="/add" method="post">
+                <div class = "column-middle">
+                    <label> Enter Your Task:</label>
+                    <input type="text" name="task_name" autocomplete="off">
+                    <button type="submit"> Add Task</button>
+                </div>
+            </form><br><br>
+        </div>
+        <div class="task-table"> 
+            <table>
+                <tbody>
+                {% for task in tasks %}
+                <tr>
+                    <td>{{task.task_num}}.</td>
+                    <td>{{task.task_name}}</td>
+                    {% if task.task_complete == False %}
+                    <td style="background-color: red; color: white;">Incomplete</td>
+                    {% else %}
+                    <td style="background-color: forestgreen; color: white;">Complete</td>
+                    {%endif%}
+                    <td><a href="/update/{{task.task_num}}">Update</a></td>
+                    <td><a href="/delete/{{task.task_num}}">Delete</a></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

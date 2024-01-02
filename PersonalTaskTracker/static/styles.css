@@ -1,0 +1,83 @@
+/* static/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #495057;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header {
+    background-color: #2C3E50;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-title {
+    margin-bottom: 20px;
+}
+
+.column-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 200px
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 1px solid #ced4da;
+}
+
+.task-table {
+    margin: 20px auto;
+}
+
+table {
+    width: 75%;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid #ced4da;
+    padding: 15px;
+    text-align: left;
+}
+
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+a {
+    text-decoration: none;
+    color: #008080;
+    font-weight: bold;
+    font-style: italic;
+}
+
+a:hover {
+    color: #00cccc;
+}
